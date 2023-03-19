@@ -37,8 +37,9 @@ const App = () => {
 
       topicRef.current.value = "";
       contentRef.current.value = "";
+
+      setIsAddScreen(false);
     }
-    setIsAddScreen(false);
   }
 
   function handleAddEditClose() {
@@ -62,6 +63,16 @@ const App = () => {
   }
 
   function handleEditNote() {
+    // if user makes both topic and current empty then delete note
+    if (
+      topicRef.current.value.trim() === "" &&
+      contentRef.current.value.trim() === ""
+    ) {
+      handleDeleteNote(noteId);
+      setIsEditScreen(false);
+      return;
+    }
+
     dispatch(
       editNote({
         id: noteId,
@@ -70,12 +81,6 @@ const App = () => {
       })
     );
 
-    // if user makes both topic and current empty then delete note
-    if (
-      topicRef.current.value.trim() === "" &&
-      contentRef.current.value.trim() === ""
-    )
-      handleDeleteNote(noteId);
     setIsEditScreen(false);
   }
 
