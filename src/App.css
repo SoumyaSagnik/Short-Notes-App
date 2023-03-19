@@ -88,7 +88,7 @@ body {
   font-size: 1.3rem;
   background-color: #fff0c4;
   color: #303334;
-  border-radius: 2vmin;
+  border-radius: 1.25vmin;
   border: none;
   cursor: pointer;
   transition: filter .3s;
