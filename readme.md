@@ -6,7 +6,7 @@
 
 Tech Stack: `ReactJS` `Redux` `Redux Toolkit` `Redux Persist` `Vite`
 
-Operations: `Add`, `Edit`, `Delete`
+Operations: `Add` `Edit` `Delete`
 
 ## HomePage
 
