@@ -128,6 +128,9 @@ const App = () => {
         )}
       </div>
       <div className="displayNotes">
+        {notesList.length === 0 && (
+          <div id="emptyMessage">Create note to display</div>
+        )}
         {notesList.map((note) => (
           <Note
             key={note.id}
