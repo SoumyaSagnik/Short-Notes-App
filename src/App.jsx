@@ -63,7 +63,7 @@ const App = () => {
   }
 
   function handleEditNote() {
-    // if user makes both topic and current empty then delete note
+    // if user makes both topic and content empty, delete note
     if (
       topicRef.current.value.trim() === "" &&
       contentRef.current.value.trim() === ""
